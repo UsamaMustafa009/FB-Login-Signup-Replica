@@ -1,0 +1,30 @@
+
+// document.getElementById('loginForm').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Prevent the form from refreshing the page
+//     const email = document.getElementById('email').value;
+//     const password = document.getElementById('password').value;
+
+//     // Perform login logic here (e.g., send to a server)
+//     console.log(`Attempting to log in with email: ${email} and password: ${password}`);
+//     alert('Logged in successfully!');
+// });
+
+// document.getElementById('createAccount').addEventListener('click', function() {
+//     alert('Redirecting to signup page...');
+// });
+// Function to show signup form and hide login form
+function showSignupForm() {
+    document.querySelector('.right-section').classList.remove('active');
+    document.querySelector('.signup-container').classList.add('active');
+}
+
+// Function to show login form and hide signup form
+function showLoginForm() {
+    document.querySelector('.signup-container').classList.remove('active');
+    document.querySelector('.right-section').classList.add('active');
+}
+
+// On page load, show login form by default
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.right-section').classList.add('active');
+});
